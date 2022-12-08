@@ -12,10 +12,6 @@
                 <td>{{$model->obat->Nama_obat}}</td>
             </tr>
             <tr>
-                <th>Jenis Obat</th>
-                <td>{{$model->jenis->Nama_Jenis}}</td>
-            </tr>
-            <tr>
                 <th>Jumlah</th>
                 <td>{{$model->jumlah}}</td>
             </tr>
