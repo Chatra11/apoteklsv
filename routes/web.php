@@ -19,3 +19,4 @@ Route::get('/', function () {
 
 Route::resource('Obat', ObatController::class)->middleware('auth');
 Route::resource('Jual', jualController::class)->middleware('auth');
+Route::resource('Beli', beliController::class)->middleware('auth');
