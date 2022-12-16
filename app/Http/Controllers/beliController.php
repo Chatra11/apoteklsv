@@ -2,12 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\pembelianRequest;
+use App\Models\Obat;
+use App\Models\Pembelian;
+use App\Models\Supplier;
 use Illuminate\Http\Request;
 
-class Pembelian extends Controller
+class beliController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index(){
-        $databeli = pembelian::with('obat','supplai')
+        $databeli = Pembelian::with('obat')
         ->paginate(4);
         return view('beli.index',compact('databeli'));
     }
@@ -19,10 +28,9 @@ class Pembelian extends Controller
      */
     public function create()
     {
-        $model = new pembelian;
+        $model = new Pembelian;
         $obat = Obat::all();
-        $supplier = Supplier::all();
-        return view('beli.create',compact('model','obat','supplier'));
+        return view('beli.create',compact('model','obat'));
     }
 
     /**

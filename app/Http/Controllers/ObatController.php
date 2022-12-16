@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\ObatRequest;
+use App\Models\Obat;
+use App\Models\penjualan;
 
 class ObatController extends Controller
 {
@@ -11,7 +14,7 @@ class ObatController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $keyword = $request->keyword;
         $data_obat = Obat::where('Kode_Obat','LIKE','%'.$keyword.'%')

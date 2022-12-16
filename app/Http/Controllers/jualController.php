@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\PenjualanRequest;
+use App\Models\Obat;
+use App\Models\penjualan;
 use Illuminate\Http\Request;
 
 class jualController extends Controller
@@ -37,7 +40,7 @@ class jualController extends Controller
      */
     public function store(Request $request)
     {
-        $model = new Penjualan;
+        $model = new penjualan;
         $model->No_Nota = $request->No_Nota;
         $model->id_nama = $request->id_nama;
         $model->jumlah = $request->jumlah;
@@ -56,7 +59,7 @@ class jualController extends Controller
      */
     public function show($id)
     {
-        $model = Penjualan::find($id);
+        $model = penjualan::find($id);
         return view('jual.show',compact('model'));
     }
 

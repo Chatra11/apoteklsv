@@ -52,5 +52,4 @@
             @endforeach
         </tbody>
     </table>
-    {{$dataJual->links('pagination::bootstrap-4')}}
 @endsection

@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controller\jualController;
+use App\Http\Controllers\jualController;
 use App\Http\Controllers\LoginController;
-
-
+use App\Http\Controllers\ObatController;
+use App\Http\Controllers\beliController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
