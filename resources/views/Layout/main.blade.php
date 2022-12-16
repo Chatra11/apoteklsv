@@ -20,7 +20,7 @@
     <body>
         <div class="d-flex" id="wrapper">
             <!-- Sidebar -->
-            <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" id = "sidebar-wrapper" style="width: 250px;">
+            <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" id = "sidebar-wrapper" style="width: 225px;">
                 <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                     <span class="fs-4">Apotek Abdi Farma</span>
                 </a>
@@ -37,28 +37,18 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/Satuan" class="nav-link text-white">
-                        Satuan Obat
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/Jenis" class="nav-link text-white">
-                        Jenis Obat
-                        </a>
-                    </li>
-                    <li>
                         <a href="/Supplier" class="nav-link text-white">
                         Data Supplier
                         </a>
                     </li>
                     <li>
                         <a href="/Beli" class="nav-link text-white">
-                        Obat Masuk
+                        Pembelian
                         </a>
                     </li>
                     <li>
                         <a href="/Jual" class="nav-link text-white">
-                        Obat Keluar
+                        Penjualan
                         </a>
                     </li>
                     <li>
