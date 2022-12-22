@@ -1,10 +1,12 @@
 <?php
 
+use App\Models\Supplier;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\jualController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ObatController;
 use App\Http\Controllers\beliController;
+use App\Http\Controllers\supplierController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,4 +30,5 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::resource('Obat', ObatController::class)->middleware('auth');
 Route::resource('Jual', jualController::class)->middleware('auth');
+Route::resource('Supplier', supplierController::class)->middleware('auth');
 Route::resource('Beli', beliController::class)->middleware('auth');
