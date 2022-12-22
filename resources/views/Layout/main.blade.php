@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
         <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
     </head>
+    
     <body>
         <div class="d-flex" id="wrapper">
             <!-- Sidebar -->
