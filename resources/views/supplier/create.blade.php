@@ -1,4 +1,4 @@
-@extends('layout.main')
+@extends('Layout.main')
 
 @section('content')
 <form method="POST" action="{{url('Supplier')}}"enctype="multipart/form-data">
