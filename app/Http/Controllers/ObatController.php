@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\ObatRequest;
 use App\Models\Obat;
 use App\Models\penjualan;
+use App\Models\Supplier;
 
 class ObatController extends Controller
 {
@@ -19,7 +20,7 @@ class ObatController extends Controller
         $keyword = $request->keyword;
         $data_obat = Obat::where('Kode_Obat','LIKE','%'.$keyword.'%')
         ->orWhere('Nama_obat','LIKE','%'.$keyword.'%')
-        ->with('supplier')
+        ->with('suplai')
         ->paginate(4);
         $data_obat->withPath('Obat');
         $data_obat->append($request->all());
@@ -34,7 +35,8 @@ class ObatController extends Controller
     public function create()
     {
         $model = new Obat;
-        return view('obat.create',compact('model'));
+        $supplai = Supplier::all();
+        return view('obat.create',compact('model','supplai'));
     }
 
     /**
@@ -48,7 +50,7 @@ class ObatController extends Controller
         $model = new Obat;
         $jumlah = Penjualan::find($model->id_jumlah);
         $model->Kode_Obat = $request->Kode_Obat;
-        $model->id_supplai = $request->id_supplai;
+        $model->Supplier_id = $request->Supplier_id;
         $model->Nama_obat = $request->Nama_obat;
         $model->Nama_satuan = $request->Nama_satuan;
         $model->Nama_Jenis = $request->Nama_Jenis;
@@ -80,7 +82,7 @@ class ObatController extends Controller
      */
     public function edit($id)
     {
-        $model = Obat::with('supplier','satuan','jenis')->find($id);
+        $model = Obat::with('suplai')->find($id);
         $supplai = Supplier::all();
         return view('obat.edit',compact('model','supplai'));
     }
@@ -96,7 +98,7 @@ class ObatController extends Controller
     {
         $model = Obat::find($id);
         $model->Kode_Obat = $request->Kode_Obat;
-        $model->id_supplai = $request->id_supplai;
+        $model->Supplier_id = $request->Supplier_id;
         $model->Nama_Obat = $request->Nama_obat;
         $model->Nama_satuan = $request->Nama_satuan;
         $model->Nama_Jenis = $request->Nama_Jenis;

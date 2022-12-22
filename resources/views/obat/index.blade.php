@@ -43,9 +43,9 @@
             <tr>
                 <td>{{$value->Kode_Obat}}</td>
                 <td>{{$value->Nama_obat}}</td>
-                <td>{{$value->supplier->Nama_Supplier}}</td>
-                <td>{{$value->satuan->Nama_satuan}}</td>
-                <td>{{$value->jenis->Nama_Jenis}}</td>
+                <td>{{$value->suplai->Nama_Supplier}}</td>
+                <td>{{$value->Nama_satuan}}</td>
+                <td>{{$value->Nama_Jenis}}</td>
                 <td>{{($value->Stok)}}</td>
                 <td>Rp.{{$value->Harga}}</td>
                 <td><a class="btn btn-warning" href="{{ url('Obat/'.$value->id)}}">Detail</a></td>

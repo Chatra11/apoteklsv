@@ -16,7 +16,7 @@ class beliController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        $databeli = Pembelian::with('obat')
+        $databeli = Pembelian::with('obat','supplai')
         ->paginate(4);
         return view('beli.index',compact('databeli'));
     }
@@ -30,7 +30,8 @@ class beliController extends Controller
     {
         $model = new Pembelian;
         $obat = Obat::all();
-        return view('beli.create',compact('model','obat'));
+        $supplier = Supplier::all();
+        return view('beli.create',compact('model','obat','supplier'));
     }
 
     /**
@@ -44,7 +45,7 @@ class beliController extends Controller
         $model = new pembelian;
         $model->Nota_beli = $request->Nota_beli;
         $model->id_nama = $request->id_nama;
-        $model->id_supplai = $request->id_supplai;
+        $model->id_supplier = $request->id_supplier;
         $model->jmlh_beli = $request->jmlh_beli;
         $model->harga_beli = $request->harga_beli;
         $model->total_beli = $request->harga_beli * $request->jmlh_beli ;

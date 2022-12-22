@@ -17,6 +17,20 @@
     </div>
   </div>
   <div class="form-group row">
+    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Supplier</label>
+    <div class="col-sm-10">
+    <select  class="form-control form-control-sm" name="id_supplai" id="Supplier_id">
+        <option value="{{$model->id_supplai}}">--Pilih Supplier--</option>
+        @foreach($supplai as $value)
+            <option value="{{$value->id}}">{{$value->Nama_Supplier}}</option>
+        @endforeach
+        @foreach($errors->get('Supplier_id') as $msg)
+            <p class="text-danger">{{ $msg }}</p>
+        @endforeach  
+    </select>
+    </div>
+  </div>
+  <div class="form-group row">
     <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Satuan</label>
     <div class="col-sm-10">
       <input type="text" class="form-control form-control-sm" id="colFormLabelSm" name="Nama_satuan" value="{{$model->Nama_satuan}}"placeholder="Masukan Satuan Obat">

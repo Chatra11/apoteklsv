@@ -14,6 +14,6 @@ class Pembelian extends Model
         return $this->belongsTo(Obat::class,'id_nama');
     }
     public function supplai(){
-        return $this->belongsTo(Supplier::class,'id_supplai');
+        return $this->belongsTo(Supplier::class,'id_supplier');
     }
 }

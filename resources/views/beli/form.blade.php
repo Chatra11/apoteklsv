@@ -21,7 +21,7 @@
   <div class="form-group row">
     <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Nama Supplier</label>
     <div class="col-sm-10">
-    <select name="id_supplai" class="form-control form-control-sm" id="colFormLabelSm">
+    <select name="id_supplier" class="form-control form-control-sm" id="colFormLabelSm">
         <option value="">--Pilih supplier--</option>
         @foreach($supplier as $value)
             <option value="{{$value->id}}">{{$value->Nama_Supplier}}</option>
