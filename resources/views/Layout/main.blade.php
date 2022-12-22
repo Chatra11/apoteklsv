@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Sistem Informasi Apotek </title>
+        <title>Sistem Informasi Apotek</title>
         <!-- Favicon-->
         <!-- Core theme CSS (includes Bootstrap)-->
         <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
@@ -17,24 +17,33 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
         <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
     </head>
-    
     <body>
         <div class="d-flex" id="wrapper">
             <!-- Sidebar -->
-            <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" id = "sidebar-wrapper" style="width: 235px;">
+            <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" id = "sidebar-wrapper" style="width: 250px;">
                 <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                    <span class="fs-4">Sistem Informasi Apotek</span>
+                    <span class="fs-4">Apotek Abdi Farma</span>
                 </a>
                 <hr>
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">
                         <a href="/" class="nav-link text-white">
-                        Dashboard
+                            Dashboard
                         </a>
                     </li>
                     <li>
                         <a href="/Obat" class="nav-link text-white">
                         Data Obat
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Satuan" class="nav-link text-white">
+                        Satuan Obat
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Jenis" class="nav-link text-white">
+                        Jenis Obat
                         </a>
                     </li>
                     <li>
@@ -44,12 +53,12 @@
                     </li>
                     <li>
                         <a href="/Beli" class="nav-link text-white">
-                        Pembelian
+                        Obat Masuk
                         </a>
                     </li>
                     <li>
                         <a href="/Jual" class="nav-link text-white">
-                        Penjualan
+                        Obat Keluar
                         </a>
                     </li>
                     <li>
