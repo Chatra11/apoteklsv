@@ -13,11 +13,11 @@
             </tr>
             <tr>
                 <th>Jenis Obat</th>
-                <td>{{$model->jenis->Nama_Jenis}}</td>
+                <td>{{$model->Nama_Jenis}}</td>
             </tr>
             <tr>
                 <th>Satuan</th>
-                <td>{{$model->satuan->Nama_satuan}}</td>
+                <td>{{$model->Nama_satuan}}</td>
             </tr>
             <tr>
                 <th>Stok</th> 

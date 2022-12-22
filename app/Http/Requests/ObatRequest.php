@@ -22,7 +22,7 @@ class ObatRequest extends FormRequest
         return [
             'Kode_Obat'=>'required',
             'Nama_obat'=>'required',
-            'id_supplai'=>'required',
+            'Supplier_id'=>'required',
             'Nama_satuan'=>'required',
             'Nama_Jenis'=>'required',
             'Stok'=>'required',

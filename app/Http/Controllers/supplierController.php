@@ -86,9 +86,9 @@ class supplierController extends Controller
     public function update(SupplierRequest $request, $id)
     {
         $model = ModelsSupplier::find($id);
-        $model->Nama_Supplier = $request->nama_supplai;
-        $model->Alamat = $request->alamat_supplai;
-        $model->Telepon = $request->telepon_supplai;
+        $model->Nama_Supplier = $request->Nama_Supplier;
+        $model->Alamat = $request->Alamat;
+        $model->Telepon = $request->Telepon;
         $model->save();
 
         return redirect('Supplier')->with('success','Data Berhasil Di Perbaharui');
