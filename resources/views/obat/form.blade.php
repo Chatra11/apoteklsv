@@ -11,45 +11,27 @@
     <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Nama Obat</label>
     <div class="col-sm-10">
       <input type="text" class="form-control form-control-sm" id="colFormLabelSm" name="Nama_obat" value="{{$model->Nama_obat}}"placeholder="Masukan Nama Obat">
-      @foreach($errors->get('Nama_obat') as $msg)
+        @foreach($errors->get('Nama_obat') as $msg)
             <p class="text-danger">{{ $msg }}</p>
         @endforeach
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Supplier</label>
-    <div class="col-sm-10">
-    <select  class="form-control form-control-sm" name="id_supplai" id="id_supplai">
-        <option value="{{$model->id_supplai}}">--Pilih Supplier--</option>
-        @foreach($supplai as $value)
-            <option value="{{$value->id}}">{{$value->Nama_Supplier}}</option>
-        @endforeach
-        @foreach($errors->get('id_supplai') as $msg)
-            <p class="text-danger">{{ $msg }}</p>
-        @endforeach  
-    </select>
     </div>
   </div>
   <div class="form-group row">
     <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Satuan</label>
     <div class="col-sm-10">
-    <select name="id_satuan" class="form-control form-control-sm" id="colFormLabelSm">
-        <option value="{{$model->id_satuan}}">--Pilih Satuan--</option>
-        @foreach($satuan as $value)
-            <option value="{{$value->id}}">{{$value->Nama_satuan}}</option>
+      <input type="text" class="form-control form-control-sm" id="colFormLabelSm" name="Nama_satuan" value="{{$model->Nama_satuan}}"placeholder="Masukan Satuan Obat">
+      @foreach($errors->get('Nama_satuan') as $msg)
+            <p class="text-danger">{{ $msg }}</p>
         @endforeach
-    </select>
     </div>
   </div>
   <div class="form-group row">
     <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Jenis</label>
     <div class="col-sm-10">
-    <select name="id_jenis" class="form-control form-control-sm" id="colFormLabelSm">
-        <option value="{{$model->id_jenis}}">--Pilih Jenis--</option>
-        @foreach($jenis as $value)
-            <option value="{{$value->id}}">{{$value->Nama_Jenis}}</option>
+      <input type="text" class="form-control form-control-sm" id="colFormLabelSm" name="Nama_Jenis" value="{{$model->Nama_Jenis}}"placeholder="Masukan Jenis Obat">
+      @foreach($errors->get('Nama_Jenis') as $msg)
+            <p class="text-danger">{{ $msg }}</p>
         @endforeach
-    </select>
     </div>
   </div>
   <div class="form-group row">

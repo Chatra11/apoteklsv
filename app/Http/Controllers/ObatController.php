@@ -34,8 +34,7 @@ class ObatController extends Controller
     public function create()
     {
         $model = new Obat;
-        $supplai = Supplier::all();
-        return view('obat.create',compact('model','supplai'));
+        return view('obat.create',compact('model'));
     }
 
     /**

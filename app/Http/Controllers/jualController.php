@@ -16,7 +16,7 @@ class jualController extends Controller
      */
     public function index()
     {
-        $dataJual = penjualan::with('obat');
+        $dataJual = penjualan::with('obat')->paginate(3);
         return view('jual.index',compact('dataJual'));
     }
 
