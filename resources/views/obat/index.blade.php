@@ -1,4 +1,4 @@
-@extends('layout.main')
+@extends('Layout.main')
 @section('content')
     @if(Session::has('success'))
         <p class ="alert alert-success">{{ Session::get('success')}}</p>
