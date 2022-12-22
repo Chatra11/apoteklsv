@@ -1,4 +1,4 @@
-@extends('layout.main')
+@extends('Layout.main')
 @section('content')
     <h2 style= "text-align:Center">Detail Obat</h2>
     <table class="table-bordered table">

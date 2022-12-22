@@ -37,16 +37,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/Satuan" class="nav-link text-white">
-                        Satuan Obat
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/Jenis" class="nav-link text-white">
-                        Jenis Obat
-                        </a>
-                    </li>
-                    <li>
                         <a href="/Supplier" class="nav-link text-white">
                         Data Supplier
                         </a>
