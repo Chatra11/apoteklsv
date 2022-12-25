@@ -1,6 +1,9 @@
 <?php
 
+use App\Models\Obat;
 use App\Models\Supplier;
+use App\Models\Pembelian;
+use App\Models\penjualan;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\jualController;
 use App\Http\Controllers\LoginController;
@@ -19,7 +22,12 @@ use App\Http\Controllers\supplierController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $jumlahobat = Obat::count();
+    $jumlahsupplier = Supplier::count();
+    $jumlahyangbeli = Pembelian::count();
+    
+
+    return view('welcome', compact('jumlahobat'), compact('jumlahsupplier'), compact('jumlahyangbeli'));
 })->middleware('auth');
 Route::get('/About', function () {return view('about');})->middleware('auth');
 Route::get('/login', [LoginController::class, 'login'])->name('login');
